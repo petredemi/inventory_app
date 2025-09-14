@@ -1,0 +1,22 @@
+
+body{
+    margin-left: 100px;
+}
+
+.form{
+    margin-left: 0px;
+}
+h2{
+    color:blue;
+}
+li{
+    display: flex;
+}
+input{
+    width: 150px;
+}
+label{
+    width: 70px;
+    background-color: aqua;
+    margin-right: 10px;
+}

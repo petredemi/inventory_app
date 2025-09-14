@@ -1,0 +1,41 @@
+body{
+    background-color: beige;
+    margin-left: 100px;
+}
+h2{
+    color: blue;
+}
+li{
+    list-style: none;
+    color: red;
+    margin: 10px;
+}
+.head{
+    display: flex;
+    background-color: cornflowerblue;
+    margin-bottom: 10px;
+    height: 30px;
+    align-items: center;
+}
+.head > div{
+    margin-right: 20px;
+    width: 80px;
+    height: 25px;
+}
+.item{
+    display: flex;
+}
+.item >div{
+    display: flex;
+    align-items: baseline;
+    margin-right: 20px;
+    width: 100px;
+    margin-bottom: 5px;
+}
+.details{
+    background-color: rgb(246, 239, 193);
+}
+button{
+    background-color: aqua;
+    margin: 2px;
+}

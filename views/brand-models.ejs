@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Models</title>
+    <link rel="stylesheet" href="brandmodels.css">
+    <link rel="stylesheet" href="/navbar.css">
+</head>
+<body>
+    <h2>Brand Models</h2>
+    <%- include("navbar.ejs") %>
+    <h3> <%= manufacturer %></h3>
+    <button type="button"> 
+        <a href="<%= idBrand %>/model">add model</a>
+    </button>
+    <div class="head">
+        <div>Model</div>
+        <div>Type</div>
+        <div>Seats</div>
+    </div>
+     <div>
+       <% brands.forEach((brand) =>  { %>
+            <div class="item">
+                <div class="model"> <%= brand.model %></div>
+                <div class="type"> <%= brand.type %></div>
+                <div class="seats"> <%= brand.seats %></div>
+            </div>
+       <% }) %>
+    </div>  
+
+
+</body>
+</html>

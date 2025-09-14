@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Inventory Application</h2>
+    <%- include("navbar.ejs") %>
+    <div class="head">
+        <div>Brand</div>
+        <div>Country</div>
+        <div>Continent</div>
+    </div>
+ 
+        <% rows.forEach((row) =>  { %>
+            <div class="item">
+                <div class="brand"> <%= row.manufacturer %> </div>
+                <div class="country"> <%= row.country %></div>
+                <div class="continent"> <%= row.continent %></div>
+                <div class="details">
+                    <button type="button" style="margin-top: 1px;"><a href= <%= row.id %>>models</a></button>
+                </div>
+                <div>
+                    <form action="/<%= row.id %>/delete" method="POST" style="display:inline;">
+                    <button type="submit" style="margin-top: 1px;">Delete</button>
+                    </form>
+                </div>
+            </div>
+
+       <% }) %>
+
+</body>
+</html>
