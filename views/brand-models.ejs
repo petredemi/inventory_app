@@ -23,8 +23,18 @@
        <% brands.forEach((brand) =>  { %>
             <div class="item">
                 <div class="model"> <%= brand.model %></div>
-                <div class="type"> <%= brand.type %></div>
+                <div class="type"> <%=  brand.type %></div>
                 <div class="seats"> <%= brand.seats %></div>
+                <div>
+                    <button type="button" style="margin-top: 1px;">
+                    <a href="/<%= brand.id %>/updatemodel %>">Edit</a>
+                    </button>
+                </div>
+                <div>
+                    <form action="/<%= brand.id %>/deletemodel" method="POST" style="display:inline;">
+                    <button type="submit" style="margin-top: 1px;">Delete</button>
+                    </form>
+                </div>
             </div>
        <% }) %>
     </div>  

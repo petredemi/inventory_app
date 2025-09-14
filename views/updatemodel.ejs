@@ -1,8 +1,9 @@
+<!--update modell-->
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand Models</title>
+    <title>Update Model</title>
     <link rel="stylesheet" href="/addmodel.css">
     <link rel="stylesheet" href="/navbar.css">
 
@@ -10,21 +11,21 @@
   <body>
     <%- include("navbar.ejs") %>
     <div class="form">
-        <h2>add Model</h2>
-        <h3><%= model %></h3>
-        <form method="POST" action="/<%= id %>/model" >
+        <h2>Update Model</h2>
+        <h3><%= brand.brand %></h3>
+        <form method="POST" action="/<%= brand.id %>/updatemodel" >
           
            <li>
                <label for="model">Model</label>
-               <input type="text" name="model" id="model">
+               <input type="text" name="model" id="model" value="<%= brand.model %>" required>
            </li>
            <li>
                <label for="type">Type</label>
-               <input type="text" name="type" id="type">
+               <input type="text" name="type" id="type" value="<%= brand.type %>" required>
            </li>
             <li>
                <label for="seats">Seats</label>
-               <input type="number" name="seats" id="seats">
+               <input type="number" name="seats" id="seats" value="<%= brand.seats %>" required>
              </li>
            <button type="submit">
                   submit    
