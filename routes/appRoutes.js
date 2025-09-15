@@ -14,10 +14,4 @@ routerInventory.post('/:id/updatemodel', controllerInventory.updateBrandModelPos
 routerInventory.post('/:id/delete', controllerInventory.deleteManufacturer)
 routerInventory.post('/:id/deletemodel', controllerInventory.deleteModelPost)
 
-//routerInventory.post('/:brandId', controllerInventory.newBrandModelPost)
-//routerInventory.post('/brand', controllerInventory.newBrandModelPost)
-//routerMessage.post('/new', controllerMessage.newMessagePost)
-//routerMessage.get ('/:messageId', controllerMessage.getMessageGet)
-//routerMessage.post('/:id/delete', controllerMessage.deleteMessagePost)
-
 module.exports = routerInventory;

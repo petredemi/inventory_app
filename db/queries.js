@@ -5,7 +5,7 @@ exports.getManufacturers = async () => {
   return rows;
 }
 exports.getManufacturer = async (brandId) => {
-  const { rows } = await pool.query(`SELECT * FROM cars WHERE id = ${brandId}`);
+  const { rows } = await pool.query("SELECT * FROM cars WHERE id = ($1)", [brandId]);
   return rows;
 }
 exports.getCheck = async (x) => {
@@ -32,7 +32,7 @@ exports.postModelUpdated = async (id, model, type, seats) => {
     await pool.query("UPDATE brands SET model = ($1), type = ($2), seats = ($3) WHERE id = ($4)", [model, type, seats, id]);
 }
 exports.deleteBrand = async (id) =>{
-  await pool.query(`DELETE FROM cars WHERE id = ${id}`)
+  await pool.query("DELETE FROM cars WHERE id = ($1)", [id])
 }
 exports.deleteModel = async (id) => {
   await pool.query("DELETE FROM brands WHERE id = ($1)", [id])

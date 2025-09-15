@@ -11,9 +11,9 @@ exports.newManufacturer = async (req, res) => {
     await res.render('form')
 }
 exports.newManufacturerPost = async (req, res) => {
-            let {manufacturer} = await req.body;
-            let {country} = await req.body;
-            let {continent} = await req.body;
+            let {manufacturer, country, continent} = await req.body;
+         //   let {country} = await req.body;
+         //   let {continent} = await req.body;
             let check = await db.getCheck(manufacturer)
           //  console.log(check)
             if(check == undefined){
@@ -59,7 +59,7 @@ exports.getBrandModels = async (req, res) => {
             idBrand: brandId,
             brands:  carBrand
     })
-    console.log(brandId)
+    console.log(brandId + 'fre')
 }
 exports.updateBrandModelGet = async (req, res) => {
     let indx = req.params.id;
@@ -73,8 +73,8 @@ exports.updateBrandModelGet = async (req, res) => {
 }
 exports.updateBrandModelPost = async (req, res) => {
     let id = req.params.id;
-    let {model, type, seats} = req.body;
-    console.log('dc' + id)
+    let { model, type, seats} = await req.body;
+   // console.log('dc' + id)
     await db.postModelUpdated(id, model, type, seats)
     res.redirect(`/${brandId}`)
 } 
@@ -85,8 +85,9 @@ exports.deleteManufacturer = async (req, res) => {
     res.redirect('/')
 }
 exports.deleteModelPost = async (req, res, next) => {
-    await db.deleteModel(req.params.id)
-    let x = req.params.id
+    let x = await req.params.id
+    await db.deleteModel(x)
     console.log(req.params.id)
+    console.log('brandId' + brandId)
     res.redirect(`/${brandId}`);
 }
