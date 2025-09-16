@@ -4,15 +4,27 @@ body{
     width: fit-content;
 }
 ul{
-    background-color: aquamarine;
+    background-color: rgb(6, 37, 27);
     display: inline-flex;
-    width: 360px;
-    height: 30px;
+    width: 100%;
     align-items: center;
+    padding: 10px;
+    border-radius: 10px;
 }
 li{
     margin-right: 20px;
     margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+li > a{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+a:hover{
+    color: deeppink;
 }
 button{
     margin-top: 20px;

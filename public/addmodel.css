@@ -16,7 +16,8 @@ input{
     width: 150px;
 }
 label{
-    width: 70px;
-    background-color: aqua;
+    width: 100px;
+    background-color: rgb(196, 244, 244);
     margin-right: 10px;
+    font-size: 1.1rem;
 }

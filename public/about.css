@@ -18,3 +18,10 @@ li{
 button{
     margin-top: 20px;
 }
+.imgs{
+    display: flex;
+    flex-wrap: wrap;
+}
+img{
+    max-width: 400px;
+}
