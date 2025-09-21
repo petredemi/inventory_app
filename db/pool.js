@@ -18,5 +18,5 @@ module.exports = new Pool({
   user: "koyeb-adm",
   database: "inventoryapp",
   password: "npg_djYLHq3UVa2T",
-  port: 5432 // The default port
+  port: 8000 // The default port
 });
