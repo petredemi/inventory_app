@@ -2,7 +2,7 @@ const {Pool} = require("pg")
 //module.exports = new Pool({
 //  host: "localhost", // or wherever the db is hosted
 //  user: "petrudemian",
-//  database: "inventory_app",
+//  database: "inventoryapp",
 //  password: "<role_password>",
 //  port: 5432 // The default port
 //});
@@ -16,7 +16,7 @@ const {Pool} = require("pg")
 module.exports = new Pool({
   host: "ep-little-base-a2wm2x79.eu-central-1.pg.koyeb.app", // or wherever the db is hosted
   user: "koyeb-adm",
-  database: "inventoryapp",
+  database: "koyebdb",
   password: "npg_djYLHq3UVa2T",
-  port: 8000 // The default port
+  port: 5432 // The default port
 });

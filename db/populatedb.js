@@ -25,7 +25,7 @@ VALUES ('Mercedes', 'xx', 'petrol', '5');
 `
 async function main() {
   const client = new Client({
-     // connectionString: "postgresql://petrudemian:<role_password>@localhost:5432/inventory_app",
+    //  connectionString: "postgresql://petrudemian:<role_password>@localhost:5432/inventoryapp",
     //  connectionString: "postgresql://petru:ZAkk8d0zUdEusUDuHRKvEiPVcg44cwxq@dpg-d2urvdvdiees739af9ag-a/messageapp_15hh"
     connectionString: "postgres://koyeb-adm:npg_djYLHq3UVa2T@ep-little-base-a2wm2x79.eu-central-1.pg.koyeb.app/koyebdb"
   });
