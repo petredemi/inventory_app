@@ -4,8 +4,20 @@ exports.getManufacturers = async () => {
   const { rows } = await pool.query("SELECT * FROM cars");
   return rows;
 }
-exports.getManufacturer = async (brandId) => {
-  const { rows } = await pool.query("SELECT * FROM cars WHERE id = ($1)", [brandId]);
+exports.countCars = async () => {
+  const {rows} =  await pool.query("SELECT COUNT(*) FROM cars");
+  return rows;
+}
+exports.countModels = async () => {
+  const {rows} =  await pool.query("SELECT COUNT(*) FROM brands");
+  return rows;
+}
+exports.countBrandModels = async (x) => {
+  const {rows} = await pool.query("SELECT COUNT(*) FROM brands WHERE brand =($1)", [x])
+  return rows;
+}
+exports.getManufacturer = async (x) => {
+  const {rows} = await pool.query("SELECT * FROM cars WHERE id = ($1)", [x]);
   return rows;
 }
 exports.getCheck = async (x) => {
@@ -22,15 +34,21 @@ exports.newManufacturerAdd = async (manufacturer, country, continent) => {
     }
   }
 exports.newModel = async (brand, model, type, seats) => {
-    await pool.query("INSERT INTO brands (brand, model, type, seats) VALUES ($1, $2, $3, $4)", [brand, model, type, seats])
-}
+  if(model != ''){
+      await pool.query("INSERT INTO brands (brand, model, type, seats) VALUES ($1, $2, $3, $4)", [brand, model, type, seats])
+  }
+  }
 exports.getModeltoUpdate = async (x) => {
   const { rows } = await pool.query("SELECT * FROM brands WHERE id = ($1)", [x]);
   return rows;
 }
-exports.postModelUpdated = async (id, model, type, seats) => {
+exports.postModelUpdated = async (model, type, seats, id) => {
     await pool.query("UPDATE brands SET model = ($1), type = ($2), seats = ($3) WHERE id = ($4)", [model, type, seats, id]);
 }
+exports.deleteRecordsModel = async ( models) => {
+      await pool.query("DELETE FROM brands WHERE brand = ($1)", [models])
+}
+
 exports.deleteBrand = async (id) =>{
   await pool.query("DELETE FROM cars WHERE id = ($1)", [id])
 }

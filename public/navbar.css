@@ -1,15 +1,16 @@
 body{
     background-color: aquamarinee;
-    height: fit-content;
-    width: fit-content;
+    width: fit-contentr;
+
 }
 ul{
-    background-color: rgb(6, 37, 27);
-    display: inline-flex;
-    width: 100%;
+    display: flex;
     align-items: center;
+    justify-content: center;
     padding: 10px;
-    border-radius: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-align: center;
 }
 li{
     margin-right: 20px;

@@ -7,30 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Inventory Application</h2>
-    <%- include("navbar.ejs") %>
-    <div class="head">
-        <div>Brand</div>
-        <div>Country</div>
-        <div>Continent</div>
-    </div>
- 
-        <% rows.forEach((row) =>  { %>
-            <div class="item">
-                <div class="brand"> <%= row.manufacturer %> </div>
-                <div class="country"> <%= row.country %></div>
-                <div class="continent"> <%= row.continent %></div>
-                <div class="details">
-                    <button type="button" style="margin-top: 1px;"><a href= <%= row.id %> >models</a></button>
-                </div>
-                <div>
-                    <form action="/<%= row.id %>/delete" method="POST" style="display:inline;">
-                    <button type="submit" style="margin-top: 1px;">Delete</button>
-                    </form>
-                </div>
+    <div class="content">
+        <h2>Inventory Application</h2>
+        <div class="menu">
+                <%- include("navbar.ejs") %>
+        </div>
+        <div class="pagecontent">
+            
+            <div class="count">
+                <h4>Total Brands: <%= countBrands %> </h4>
+                <h4 style="color:rgb(208, 4, 4); margin-left: 10px;">Models Available: <%= countModels %></h4> 
             </div>
+                <% rows.forEach((row) =>  { %>
+                    <div class="item" style="background-color: <%- row.col %> ;">
+                        <div class="brand" style="margin-bottom: 10px;"> <%= row.manufacturer %> </div>
+                        <div class="country"> <%= row.country %></div>
+                        <div class="continent"> <%= row.continent %></div>
+                        <div class="modelnr">models: <%= row.count %></div>
+                        <div class="btn">
+                            <button type="button" style="margin-top: 1px;"><a href= <%= row.id %> >models</a></button>
+                        </div>
+                        <div class="btn">
+                            <form action="/<%= row.id %>/delete" method="POST" style="display:inline;">
+                            <button type="submit" style="margin-top: 1px;">Delete</button>
+                            </form>
+                        </div>
+                    </div>
 
-       <% }) %>
-
+               <% }) %>
+        </div>
+        <%- include("footer.ejs") %>
+    </div>
 </body>
 </html>

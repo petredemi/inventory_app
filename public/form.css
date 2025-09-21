@@ -1,22 +1,54 @@
 body{
-    margin-left: 100px;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(253, 249, 252);
+    padding: 0px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+.menu{
+    width: 100%;
+    max-width: 900pxx;
+    background-color: rgb(44, 8, 78);
+    height: 60px;
+    margin-bottom: 20px;
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+
 }
 
 .form{
-    margin-left: 0px;
+    margin: auto;
 }
 h2{
-    color:blue;
+    color:rgb(119, 119, 248);
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px black;
 }
 li{
     display: flex;
 }
 input{
-    width: 150px;
+    width: 250px;
 }
 label{
-    width: 70px;
-    background-color: aqua;
+    width: 100px;
+    background-color: rgb(226, 246, 210);
     margin-right: 10px;
+}
+form > button{
+    margin-bottom: 30px;
+    font-size: 1rem;
+    background-color: rgb(146, 245, 249);
+    border-radius: 4px;
+}
+footer{
+    background-color: rgb(193, 193, 193);
+    text-align: center;
+}
+footer p{
+    margin: 5px;
 }

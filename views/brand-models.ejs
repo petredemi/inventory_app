@@ -8,37 +8,46 @@
     <link rel="stylesheet" href="/navbar.css">
 </head>
 <body>
+    <div class="content">
     <h2>Brand Models</h2>
-    <%- include("navbar.ejs") %>
-    <h3> <%= manufacturer %></h3>
-    <button type="button"> 
-        <a href="<%= idBrand %>/model">add model</a>
-    </button>
-    <div class="head">
-        <div>Model</div>
-        <div>Type</div>
-        <div>Seats</div>
-    </div>
-     <div>
-       <% brands.forEach((brand) =>  { %>
-            <div class="item">
-                <div class="model"> <%= brand.model %></div>
-                <div class="type"> <%=  brand.type %></div>
-                <div class="seats"> <%= brand.seats %></div>
-                <div>
-                    <button type="button" style="margin-top: 1px;">
-                    <a href="/<%= brand.id %>/updatemodel">Edit</a>
-                    </button>
-                </div>
-                <div>
-                    <form action="/<%= brand.id %>/deletemodel" method="POST" style="display:inline;">
-                    <button type="submit" style="margin-top: 1px;">Delete</button>
-                    </form>
-                </div>
+        <div class="pagecontent">
+            <div class="menu">
+                    <%- include("navbar.ejs") %>
             </div>
-       <% }) %>
+            <h3> <%= manufacturer %></h3>
+            <h5>Models Available <%= nrmodels %> </h5>
+            <button type="button" style="margin-bottom: 10px;"> 
+                <a href="<%= idBrand %>/model">add model</a>
+            </button>
+    <!--        <div class="head">
+                <div>Model</div>
+                <div>Type</div>
+                <div>Seats</div>
+            </div> -->
+            <div>
+               <% brands.forEach((brand) =>  { %>
+                    <div class="item">
+                        <div class="model"><i>model: </i><%= brand.model %></div>
+                        <div class="type"><i>type: </i> <%= brand.type %></div>
+                        <div class="seats"><i> seats: </i><%= brand.seats %></div>
+                        <div>
+                            <button type="button" style="margin-top: 1px;">
+                            <a href="/<%= brand.id %>/updatemodel">Edit</a>
+                            </button>
+                        </div>
+                        <div>
+                            <form action="/<%= brand.id %>/deletemodel" method="POST" style="display:inline;">
+                            <button type="submit" style="margin-top: 1px;">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+               <% }) %>
+            </div>
+         <%- include("footer.ejs") %>
+        </div>
+        
     </div>  
-
+   
 
 </body>
 </html>

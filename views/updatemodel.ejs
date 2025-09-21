@@ -9,8 +9,12 @@
 
   </head>
   <body>
-    <%- include("navbar.ejs") %>
-    <div class="form">
+    
+    <div class="content">
+      <div class="menu">
+            <%- include("navbar.ejs") %>
+      </div>
+      <div class="form">
         <h2>Update Model</h2>
         <h3><%= brand.brand %></h3>
         <form method="POST" action="/<%= brand.id %>/updatemodel" >
@@ -31,7 +35,9 @@
                   submit    
             </button>
         </form>
-    </div>
+      </div>
+      <%- include("footer.ejs") %>
 
+    </div>
   </body>
 </html>

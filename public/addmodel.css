@@ -1,13 +1,32 @@
 
 body{
-    margin-left: 100px;
+    margin:0px;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    width:100vw;
+    margin: auto;
+}
+.menu{
+    background-color: rgb(44, 8, 78);
+    height: 60px;
+    margin: aut0o;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
+
 .form{
-    margin-left: 0px;
+    margin:auto
 }
 h2{
-    color:blue;
+    color:rgb(24, 24, 109);
 }
 li{
     display: flex;
@@ -17,7 +36,14 @@ input{
 }
 label{
     width: 100px;
-    background-color: rgb(196, 244, 244);
+    background-color: rgb(230, 247, 247);
     margin-right: 10px;
     font-size: 1.1rem;
+}
+footer{
+    background-color: rgb(193, 193, 193);
+    text-align: center;
+}
+footer p{
+    margin: 5px;
 }

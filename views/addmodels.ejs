@@ -4,33 +4,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Models</title>
     <link rel="stylesheet" href="/addmodel.css">
-    <link rel="stylesheet" href="/navbar.css">
+        <link rel="stylesheet" href="/navbar.css">
+
+
 
   </head>
   <body>
-    <%- include("navbar.ejs") %>
-    <div class="form">
-        <h2>add Model</h2>
-        <h3><%= model %></h3>
-        <form method="POST" action="/<%= id %>/model" >
-          
-           <li>
-               <label for="model">Model</label>
-               <input type="text" name="model" id="model">
-           </li>
-           <li>
-               <label for="type">Type</label>
-               <input type="text" name="type" id="type">
-           </li>
-            <li>
-               <label for="seats">Seats</label>
-               <input type="number" name="seats" id="seats">
-             </li>
-           <button type="submit">
-                  submit    
-            </button>
-        </form>
-    </div>
+    <div class="content">
+        <div class="menu">
+            <%- include("navbar.ejs") %>
+        </div>
+        <div class="form">
+            <h2>add Model</h2>
+            <h3><%= model %></h3>
+            <form method="POST" action="/<%= id %>/model" >
 
+               <li>
+                   <label for="model">Model</label>
+                   <input type="text" name="model" id="model">
+               </li>
+               <li>
+                   <label for="type">Type</label>
+                   <input type="text" name="type" id="type">
+               </li>
+                <li>
+                   <label for="seats">Seats</label>
+                   <input type="number" name="seats" id="seats">
+                 </li>
+               <button type="submit">
+                      submit    
+                </button>
+            </form>
+        </div>
+        <%- include("footer.ejs") %>
+    </div>
   </body>
 </html>

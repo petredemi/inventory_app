@@ -26,6 +26,7 @@ VALUES ('Mercedes', 'xx', 'petrol', '5');
 async function main() {
   const client = new Client({
       connectionString: "postgresql://petrudemian:<role_password>@localhost:5432/inventory_app",
+    //  connectionString: "postgresql://petru:ZAkk8d0zUdEusUDuHRKvEiPVcg44cwxq@dpg-d2urvdvdiees739af9ag-a/messageapp_15hh"
   });
     
   await client.connect();

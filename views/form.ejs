@@ -6,29 +6,33 @@
     <link rel="stylesheet" href="/form.css">
   </head>
   <body>
-    <h2>Inventory Application</h2>
-    <%- include("navbar.ejs") %>
-    <div class="form">
-        <h2>add category</h2>
-        <form method="POST" action="/newmanufacturer">
-           <li>
-               <label for="manufacturer">Brand</label>
-               <input type="text" name="manufacturer" id="manu">
-           </li>
-           <li>
-               <label for="country">Country</label>
-               <input type="text" name="country" id="country">
-           </li>
-           <li>
-               <label for="countinent">Continent</label>
-               <input type="text" name="continent" id="cont">
-           </li>
-        
-           <button type="submit">
-                  submit    
-            </button>
-        </form>
+    <div class="content">
+      <h2>Inventory Application</h2>
+      <div class="menu">
+          <%- include("navbar.ejs") %>
+      </div>
+      <div class="form">
+          <h2>add a car brand</h2>
+          <form method="POST" action="/newmanufacturer">
+             <li>
+                 <label for="manufacturer">Brand</label>
+                 <input type="text" name="manufacturer" id="manu">
+             </li>
+             <li>
+                 <label for="country">Country</label>
+                 <input type="text" name="country" id="country">
+             </li>
+             <li>
+                 <label for="countinent">Continent</label>
+                 <input type="text" name="continent" id="cont">
+             </li>
+            
+             <button type="submit">
+                    submit    
+              </button>
+          </form>
+      </div>
     </div>
-
+    <%- include("footer.ejs") %>
   </body>
 </html>

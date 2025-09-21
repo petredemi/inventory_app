@@ -1,41 +1,81 @@
 body{
-    background-color: beige;
-    margin-left: 100px;
+    padding: 0px;
+    display: flex;
+    text-align: center;
+    
+}
+.content{
+    background-color: rgb(248, 248, 223);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
+    margin: auto;
+}
+.menu{
+    width: 100%;
+    background-color: rgb(44, 8, 78);
+    height: 70px;
+    margin-bottom: 20px;
 }
 h2{
     color: blue;
+}
+h4{
+    margin: 3px;
 }
 li{
     list-style: none;
     color: red;
     margin: 10px;
 }
-.head{
+.count{
     display: flex;
     background-color: cornflowerblue;
+    width: 330px;
     margin-bottom: 10px;
     height: 30px;
     align-items: center;
-}
-.head > div{
-    margin-right: 20px;
-    width: 80px;
-    height: 25px;
+    margin-left: 1px;
 }
 .item{
     display: flex;
+    flex-wrap: wrap;
+    border: 2px solid rgb(58, 21, 93);
+    box-shadow: 2px 3px 5px black;
+    margin: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    width: fit-content;
+    max-width: 500px;
 }
 .item >div{
-    display: flex;
-    align-items: baseline;
-    margin-right: 20px;
+    display: flexx;
+    align-items: baselinee;
+    margin-right: 10px;
     width: 100px;
-    margin-bottom: 5px;
+    margin-bottom: 5pxx;
 }
-.details{
-    background-color: rgb(246, 239, 193);
+.brand{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color:rgb(48, 7, 105);
+}
+.btn{
+    width: 50px;
 }
 button{
     background-color: aqua;
     margin: 2px;
+}
+a{
+    text-decoration: none;
+}
+footer{
+    background-color: rgb(193, 193, 193);
+    text-align: center;
+    width: 100%;
+}
+footer p{
+    margin: 5px;
 }
