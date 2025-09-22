@@ -27,8 +27,7 @@ async function main() {
   const client = new Client({
     //  connectionString: "postgresql://petrudemian:<role_password>@localhost:5432/inventoryapp",
     //  connectionString: "postgresql://petru:ZAkk8d0zUdEusUDuHRKvEiPVcg44cwxq@dpg-d2urvdvdiees739af9ag-a/messageapp_15hh"
-    //connectionString: "postgres://inventoryapp:npg_djYLHq3UVa2T@ep-little-base-a2wm2x79.eu-central-1.pg.koyeb.app/koyebdb"
-    connectionString: "postgres://koyeb-adm:npg_IdEmlar8U2bc@ep-jolly-wind-a2rsuoie.eu-central-1.pg.koyeb.app/inventoryapp"
+    connectionString: "postgres://koyeb-adm:npg_IdEmlar8U2bc@ep-jolly-wind-a2rsuoie.eu-central-1.pg.koyeb.app/koyebdb"
   });
     
   await client.connect();
