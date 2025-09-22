@@ -18,5 +18,6 @@ module.exports = new Pool({
   user: "koyeb-adm",
   database: "koyebdb",
   password: "npg_IdEmlar8U2bc",
-  port: 5432 // The default port
+  port: 5432, // The default port
+  ssl:true
 });
